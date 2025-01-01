@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const API_URL = import.meta.env.VITE_API_URL;
+console.log(API_URL);
+
 const TareaIndividual = ({ tarea, completarTarea, eliminarTarea }) => {
   return (
     <div>
