@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+backend/node_modules
+backend/dist
+backend/dist-ssr
+backend/*.local
+backend/.env
+backend/.env.local  
+
+
 # Variables de entorno
 .env
 .env.local
