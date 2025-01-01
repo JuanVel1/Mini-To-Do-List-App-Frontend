@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+const API_URL = import.meta.env.VITE_API_URL;
 const TareaIndividual = ({ tarea, completarTarea, eliminarTarea }) => {
   return (
     <div>
@@ -75,7 +76,7 @@ const App = () => {
 
   useEffect(() => {
     
-    fetch(`http://localhost:${puerto}/todos`)
+    fetch(`${API_URL}/todos`)
       .then((response) => response.json())
       .then((data) => setTareas(data))
       .catch((error) => console.error('Error al cargar tareas:', error));
@@ -85,7 +86,7 @@ const App = () => {
 
   const agregarTarea = (texto) => {
     setTareas([...tareas, { id: tareas.length + 1, task: texto, completada: false }]);
-    fetch(`http://localhost:${puerto}/todos`, {
+    fetch(`${API_URL}/todos`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -96,7 +97,7 @@ const App = () => {
 
   const completarTarea = (id) => {
     setTareas(tareas.map((tarea) => (tarea.id == id ? { ...tarea, completada: !tarea.completada } : tarea)));
-    fetch(`http://localhost:${puerto}/todos/${id}`, {
+    fetch(`${API_URL}/todos/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -107,7 +108,7 @@ const App = () => {
 
   const eliminarTarea = (id) => {
     setTareas(tareas.filter((tarea) => tarea.id !== id));
-    fetch(`http://localhost:${puerto}/todos/${id}`, {
+    fetch(`${API_URL}/todos/${id}`, {
       method: 'DELETE',
     });
   };
