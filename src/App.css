@@ -1,0 +1,92 @@
+#root {
+  margin: 0 auto;
+  text-align: center; 
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  background-color: var(--Mindaro) !important;
+  color: var(--Jet) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+}
+
+.version{
+  color: var(--yellow) !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  text-decoration: underline;
+}
+
+.input-tarea{
+  background-color: var(--White) !important;
+  color: var(--Jet) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 10px 10px !important;
+  font-size: 16px !important;
+  font-weight: bold !important; 
+}
+
+.eliminar-tarea{
+  background-color: var(--red) !important;
+
+}
+
+h1, h2{
+  color: var(--Mindaro) !important;
+}
+button:hover {
+  background-color: var(--black) !important;
+  color: var(--White) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+p{
+  color: var(--White) !important;
+  font-size: 1.2rem !important;
+}
+
+b{
+  color: var(--red) !important;
+  font-size: 1.2rem !important;
+}
